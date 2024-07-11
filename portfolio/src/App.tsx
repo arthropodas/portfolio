@@ -1,23 +1,21 @@
+// src/components/App.tsx
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/navbar/Navbar";
+import Layout from "./components/layout/Layout";
 import Home from "./components/home/Home";
 import Projects from "./components/projects/Projects";
-import { useThemeStore } from "./zustand/interface";
-
- // Import your Projects component
 
 const App: React.FC = () => {
-  const { theme } = useThemeStore();
-
   return (
-    <div className={`h-full ${theme === 'dark' ? 'bg-black' : 'bg-white'}`}>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<Projects />} /> {/* Add route for the Projects component */}
-      </Routes>
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="projects" element={<Projects/>} />
+        <Route path="" element={<Projects/>} />
+
+        
+      </Route>
+    </Routes>
   );
 };
 
