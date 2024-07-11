@@ -2,7 +2,7 @@
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://github.com/arthropodas/portfolio",
+  "homepage": "https://github.com/arthropodas/portfolio/tree/develop/portfolio",
   "type": "module",
   "scripts": {
     "dev": "vite",
