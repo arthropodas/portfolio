@@ -1,9 +1,8 @@
 import React from "react";
-import { FaGithub, FaLinkedin, FaMoon, FaSun } from "react-icons/fa6";
-import { useThemeStore } from "../../zustand/interface";
+
 
 const Projects: React.FC = () => {
-  const { theme } = useThemeStore();
+
 
   return (
     <div className="m-10">
@@ -29,16 +28,7 @@ const Projects: React.FC = () => {
           </p>
         </div>
       </a>
-      <style jsx>{`
-        @keyframes borderAnimation {
-          0% {
-            border-image-source: linear-gradient(to right, #6366f1, #8b5cf6, #ec4899);
-          }
-          100% {
-            border-image-source: linear-gradient(to left, #6366f1, #8b5cf6, #ec4899);
-          }
-        }
-      `}</style>
+    
     </div>
   );
 };
